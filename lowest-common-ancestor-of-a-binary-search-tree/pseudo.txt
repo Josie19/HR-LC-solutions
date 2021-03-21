@@ -1,0 +1,14 @@
+problem: find the least common ancestor between two given nodes
+constraints: the numer of nodes in the tree is in the range [2,5^10]
+-10^9 <= Node.val <= 10^9
+all Node.val are unique
+p!=q
+p and q will exist in the BST
+base case: if root null return null
+edge case: if root is equal to q or root is equal to p return root; nodes can be lca themselves
+pseudocode:
+if root is null return null
+if root is p or q return null
+if p.val < root->val and q.val < root.val return recursion in left subtree
+else if p.val and q.val > root.val return recursion in right subtree
+else return root
