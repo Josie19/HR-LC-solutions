@@ -1,0 +1,19 @@
+problem: generate parentheses
+description: given n pairs of parantheses, write a function to generate all combos of well-formed parentheses
+adt: vector<string>
+paramters: int
+base case: if n < 0, return empty vector
+edge case: x permutations of n pairs of parantheses
+constraints: 1 <= n <= 8
+pseudocode:
+if n < 0 return null
+//now for backcalling, use recursive function
+backtrack(int n, int l, int r, vector<string>& combos, string s)
+if s.length() is equal to 2*n
+	then push back string to vector combos
+	return control to call stack
+if open parantheses is less than
+	then invoke recursive call, add open parantheses to string
+if close parantheses is less than open
+	then invoke recursion, append close paranthesis to string
+//utilizing the call stack, pushing to vector, and returning control to main function
